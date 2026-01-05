@@ -16,7 +16,7 @@ class SigninScreen extends StatefulWidget {
 class _SigninScreenState extends State<SigninScreen> {
   bool isLoading = false;
 
-  final _formSignInKey = GlobalKey<FormState>();
+  final formSignInKey = GlobalKey<FormState>();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   @override
@@ -37,7 +37,7 @@ class _SigninScreenState extends State<SigninScreen> {
               ),
               child: SingleChildScrollView(
                 child: Form(
-                  key: _formSignInKey,
+                  key: formSignInKey,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -103,7 +103,7 @@ class _SigninScreenState extends State<SigninScreen> {
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () async {
-                            if (_formSignInKey.currentState!.validate()) {
+                            if (formSignInKey.currentState!.validate()) {
                               final authProvider = Provider.of<AuthProvider>(
                                 context,
                                 listen: false,
