@@ -9,10 +9,10 @@ class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
 
   @override
-  State<SignupScreen> createState() => _SignupScreenState();
+  State<SignupScreen> createState() => SignupScreenState();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class SignupScreenState extends State<SignupScreen> {
   final formSignupKey = GlobalKey<FormState>();
 
   final TextEditingController nameController = TextEditingController();

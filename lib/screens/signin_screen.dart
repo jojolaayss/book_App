@@ -10,10 +10,10 @@ class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});
 
   @override
-  State<SigninScreen> createState() => _SigninScreenState();
+  State<SigninScreen> createState() => SigninScreenState();
 }
 
-class _SigninScreenState extends State<SigninScreen> {
+class SigninScreenState extends State<SigninScreen> {
   bool isLoading = false;
 
   final formSignInKey = GlobalKey<FormState>();
