@@ -13,7 +13,7 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-  final _formSignupKey = GlobalKey<FormState>();
+  final formSignupKey = GlobalKey<FormState>();
 
   final TextEditingController nameController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
@@ -51,7 +51,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                   child: Form(
-                    key: _formSignupKey,
+                    key: formSignupKey,
                     child: SingleChildScrollView(
                       child: Column(
                         children: [
@@ -169,7 +169,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               onPressed: authConsumer.busy
                                   ? null
                                   : () async {
-                                      if (_formSignupKey.currentState!
+                                      if (formSignupKey.currentState!
                                           .validate()) {
                                         final Map<String, dynamic>
                                         registrationData = {
